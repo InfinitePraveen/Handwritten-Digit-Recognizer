@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Handwritten Digit Recognizer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Handwritten Digit Recognizer</h1>
+      <p>Draw a digit or upload an image. A Keras neural network will predict 0–9.</p>
+    </header>
+
+    <section class="card">
+      <h2>Draw a Digit</h2>
+      <canvas id="canvas" width="280" height="280"></canvas>
+      <div class="buttons">
+        <button id="clearBtn">Clear</button>
+        <button id="predictBtn">Predict</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Upload an Image</h2>
+      <input id="fileInput" type="file" accept="image/*">
+      <button id="uploadBtn">Predict Upload</button>
+    </section>
+
+    <section id="result" class="card result hidden">
+      <h2>Prediction</h2>
+      <div id="digit"></div>
+      <p id="confidence"></p>
+      <div id="bars"></div>
+    </section>
+
+    <footer>
+      <p>Built by <strong>Praveen Kumar</strong></p>
+      <a href="https://github.com/InfinitePraveen" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/infinitepraveen/" target="_blank">LinkedIn</a>
+    </footer>
+  </main>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

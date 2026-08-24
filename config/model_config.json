@@ -1,0 +1,15 @@
+{
+  "input_shape": [
+    28,
+    28,
+    1
+  ],
+  "num_classes": 10,
+  "hidden_layers": [
+    256,
+    128
+  ],
+  "dropout": 0.2,
+  "optimizer": "adam",
+  "loss": "sparse_categorical_crossentropy"
+}
